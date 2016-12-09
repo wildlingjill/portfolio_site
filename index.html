@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jill Robinson Portfolio</title>
+	<style>
+
+		@font-face {
+			font-family: GravityBook;
+			src: url("fonts/Gravity-Book.otf");
+		}
+
+		body {
+			font-family: 'GravityBook', sans-serif;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.parallax {
+		/* The image used */
+			background-image: url("code4.png");
+			/* Set a specific height */
+			min-height: 300px; 
+			height: 350px;
+			width: 100%;
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center; 
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.img {
+			display: flex;
+			max-width: 100%;
+			padding-top: 85px;
+			justify-content: center;
+		}
+
+		header {
+			position: fixed;
+			right: 0;
+			left: 0;
+			top: 0;
+			z-index: 1030;
+			margin-bottom: 0;
+			background: #FFF;
+			padding: 15px 0;
+			background-color: black;
+			color: white;
+			height: 55px;
+			}
+
+		header h1 {
+			font-weight: 400;
+			padding-left: 20px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			position: absolute;
+			top: 0px;
+			display: inline-block;
+			font-size: 40px;
+			letter-spacing: 3px;
+		}
+
+		header h4 {
+			font-weight: 300;
+			padding-left: 20px;
+			margin-top: 18px;
+			margin-bottom: 10px;
+			margin-left: 15px;
+			display: inline-block;
+			position: absolute;
+			top: 40px;
+			padding-left: 5px;
+			letter-spacing: 4px;
+		}
+
+		li {
+			display: inline-block;
+			list-style: none;
+			vertical-align: top;
+			padding: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		li a:hover {
+			background-color: black;
+		}
+
+		li a:hover img, .triggeredHover {
+			transform: rotate(360deg);
+			transition: all 0.7s;
+		}
+
+		.contact_buttons {
+			position: absolute;
+			right: 0px;
+			top: 10px;
+			height: 60px;
+			margin-top: 5px;
+		}
+
+		.scroller {
+			display: flex;
+			flex-direction: column;
+			background-image: url("background.png");
+			height: 1850px;
+		}
+
+		.scroller h2 {
+			margin-top: 0px;
+			padding-top: 40px;
+			margin-bottom: 20px;
+			text-align: center;
+			color: white;
+			font-weight: 100;
+			font-size: 46px;
+		}
+
+		h3 {
+			margin-top: 40px;
+			padding-top: 40px;
+			margin-bottom: 60px;
+			text-align: center;
+			color: white;
+			font-weight: 100;
+			font-size: 30px;
+		}
+
+		.flex-p p{
+			align-items: center;
+			color: white;
+			text-align: justify;
+			margin-right: 30%;
+			margin-left: 30%;
+			line-height: 200%;
+			text-justify: inter-word;
+		}
+
+		.flex-p p a {
+			color: DodgerBlue;
+		}
+
+		.span {
+			color: DodgerBlue;
+		}
+
+		.flex-h2 {
+			justify-content: center;
+
+		}
+
+		.technologies {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin-bottom: 20px;
+		}
+
+		.technologies img {
+			margin: 0px;
+		}
+
+		.tooltip {
+			position: relative;
+		}
+
+		.tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: #555;
+			color: white;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -60px;
+			opacity: 0;
+			transition: opacity 1s;
+		}
+
+		.tooltiptext:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.projects {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.projectdescriptions {
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 20px;
+		}
+
+		.projects .img {
+			border-radius: 10px 10px 10px 10px;
+			cursor: pointer;
+			transition: 0.3s;
+			padding: 0px;
+		}
+
+		.thankscontainer{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 700px;
+			margin-left: 400px;
+		}
+
+		.contactcontainer {
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+			margin-left: 50px;
+			width: 200px;
+			height: 315px;
+		}
+
+		.contactcontainer h4 a{
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Jill Robinson</h1>
+			<h4>JAVASCRIPT DEVELOPER</h4>
+			<ul class="contact_buttons">
+				<li>
+					<a href="docs/jillrobinsonresumeNov16.pdf">
+						<img src="img/resume.png" width="40" height="40">
+					</a>
+				</li>
+				<li>
+					<a href="mailto:contact@jillcrobinson.com" target="_blank">
+						<img src="img/email.png" width="40" height="40">
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/wildlingjill" target="_blank">
+						<img src="img/github.png" width="40" height="40">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/jillcrobinson" target="_blank">
+						<img src="img/linkedin.png" width="40" height="40">
+					</a>
+				</li>
+		</header>
+
+		<div class="parallax">
+			<!-- div for the parallax background image -->
+		</div>
+
+		<div class="scroller" >
+			<h2 class="flex-h2">Hi, I'm <span class="span">Jill<span></h2>
+			<div class="flex-p">
+				<p>I'm a determined and motivated molecular microbiologist turned <span class="span">full-stack JavaScript engineer</span> currently living in <span class="span">San Jose, CA</span> (but originally from the UK)!</p> 
+				<p>I am passionate about learning new technologies, and have a special interest in <span class="span">front-end frameworks</span> such as <span class="span">AngularJS</span> and <span class="span">React</span>. I gained experience building in these frameworks at the Coding Dojo bootcamp I recently attended. I also have experience of working in full stack Python, and iOS.</p>
+				<p>If you feel like I could be a good fit for your team, please get in touch at contact@jillcrobinson.com, or view my <a href="https://www.linkedin.com/in/jillcrobinson">LinkedIn</a> or <a href="https://github.com/wildlingjill">GitHub</a> accounts.
+			</div>
+			<br>
+			<h3>Skills</h3>
+			<div class="technologies">
+				<div class="tooltip">
+					<img src="img/javascript.png" width="60" height="60"><span class="tooltiptext">JavaScript</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/angular.png" width="60" height="60"><span class="tooltiptext">AngularJS</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/mongodb.png" width="60" height="60"><span class="tooltiptext">MongoDB</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/node.png" width="60" height="60"><span class="tooltiptext">Node.js</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/react.png" width="60" height="60"><span class="tooltiptext">React</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/github2.png" width="60" height="60"><span class="tooltiptext">Git</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/html5.png" width="60" height="60"><span class="tooltiptext">HTML5</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/css3.png" width="60" height="60"><span class="tooltiptext">CSS3</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/python.png" width="60" height="60"><span class="tooltiptext">Python</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/swift.png" width="60" height="60"><span class="tooltiptext">Swift</span>
+				</div>
+				<div class="tooltip">
+					<img src="img/mysql.png" width="60" height="60"><span class="tooltiptext">MySQL</span>
+				</div>
+			</div>
+			<br>
+			<h3>Projects</h3>
+			<div class="projectcontainer">
+				<div class="projects">
+					<a href="https://github.com/wildlingjill/maze_project">
+						<img class="img" src="img/imaze.png" width="400px" height="250px" style="margin-left: 20px">
+					</a>
+					<a href="https://github.com/wildlingjill/MEANBoilerplate/tree/belt2">
+						<img class="img" src="img/questionsanswers.png" width="400px" height="250px" style="margin-left: 20px">
+					</a>
+					<a href="https://github.com/wildlingjill/directme">
+						<img class="img" src="img/directme.png" width="400px" height="250px" style="margin-left: 20px">
+					</a>
+				</div>
+				<div class="projectdescriptions">
+					<p style="display: inline; width: 30%; color:white; text-align: center">iMaze: interactive marble maze game for iOS</p>
+					<p style="display: inline; width: 30%; color:white; text-align: center">Questions and Answers: a simple app that allows the user to post questions and answers, and up-vote other answers.</p>
+					<p style="display: inline; width: 30%; color:white; text-align: center">DirectMe: Python activities app with Yelp API integration</p>
+				</div>
+			</div>
+			<br>
+			<div>
+				<h3>Thanks for visiting!</h3>
+				<div class="thankscontainer">
+					<img src="img/me.jpg" width="220" height="315" style="border-radius: 20px">
+					<div class="contactcontainer" style="text-align: center">
+						<h4><a href="docs/jillrobinsonresumeNov16.pdf">View my resume</a></h4>
+						<hr style="width: 100%; margin: 0px; opacity: 0.5">
+						<h4><a href="mailto:contact@jillcrobinson.com">Email me</a></h4>
+						<hr style="width: 100%; margin: 0px; opacity: 0.5">
+						<h4><a href="https://github.com/wildlingjill">View my GitHub profile</a></h4>
+						<hr style="width: 100%; margin:0px; opacity: 0.5">
+						<h4><a href="https://www.linkedin.com/in/jillcrobinson">Add me on LinkedIn</a></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
