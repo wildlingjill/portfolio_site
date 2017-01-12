@@ -101,7 +101,7 @@
 			.img {
 				display: flex;
 				max-width: 100%;
-				padding-top: 85px;
+				padding-top: 25px;
 				justify-content: center;
 			}
 
@@ -216,12 +216,9 @@
 			}
 
 			.projects a {
-				margin-left: 20px;
-			}
-
-			.projects a:last-child {
-				margin-right: 20px;
-			}
+				margin-left: 10px;
+				margin-right: 10px;
+ 			}
 
 			.projectdescriptions {
 				display: flex;
@@ -233,7 +230,6 @@
 				border-radius: 10px 10px 10px 10px;
 				cursor: pointer;
 				transition: 0.3s;
-				padding: 0px;
 				width: 400px;
 				height: 250px;
 				object-fit: contain;
@@ -248,6 +244,11 @@
 			}
 
 			/* thankscontainer and margins/size on projects .img - could change size on media query*/
+			.thankscontainer img {
+				width: 220px;
+				height: 315px;
+			}
+
 
 			.contactcontainer {
 				display: flex;
@@ -281,10 +282,10 @@
 					margin-bottom: 30px;
 				}
 
-				.technologies {
+				/*.technologies {
 					margin-left: 30px;
 					margin-right: 30px;
-				}
+				}*/
 
 				.technologies img {
 					padding: 10px;
@@ -297,8 +298,6 @@
 				.projects .img {
 					width: 300px;
 					height: 190px;
-					margin: 10px;
-					padding-left: 10px;
 				}
 
 				.projectdescriptions {
@@ -312,9 +311,7 @@
 				}
 
 				.thankscontainer img {
-					height: 236px;
-					width: 165px;
-					margin-left: 10%;
+					display: none;
 				}
 
 				.contactcontainer {
@@ -326,10 +323,17 @@
 
 			@media (max-width: 1024px){
 
+				.parallax {
+					min-height: 200px;
+					height: 200px;
+				}
+
 				.thankscontainer img {
-					height: 236px;
-					width: 185px;
-					margin-left: 10%;
+					display: none;
+				}
+
+				.tooltiptext {
+					display: none;
 				}
 
 			}
@@ -435,7 +439,7 @@
 				<div>
 					<h3>Thanks for visiting!</h3>
 					<div class="thankscontainer">
-						<img src="img/me.jpg" width="220" height="315" style="border-radius: 20px">
+						<img src="img/me.jpg" style="border-radius: 20px">
 						<div class="contactcontainer" style="text-align: center">
 							<h4><a href="docs/jillrobinsonresumeNov16.pdf">View my resume</a></h4>
 							<hr style="width: 100%; margin: 0px; opacity: 0.5">
