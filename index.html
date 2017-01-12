@@ -165,6 +165,8 @@
 				justify-content: space-around;
 				margin-bottom: 20px;
 				flex-wrap: wrap;
+				width: 90%;
+				margin-left: 5%;
 			}
 
 			.technologies img {
@@ -211,6 +213,14 @@
 			.projects {
 				display: flex;
 				justify-content: space-around;
+			}
+
+			.projects a {
+				margin-left: 20px;
+			}
+
+			.projects a:last-child {
+				margin-right: 20px;
 			}
 
 			.projectdescriptions {
@@ -314,6 +324,16 @@
 				}
 			}
 
+			@media (max-width: 1024px){
+
+				.thankscontainer img {
+					height: 236px;
+					width: 185px;
+					margin-left: 10%;
+				}
+
+			}
+
 		</style>
 	</head>
 	<body>
@@ -396,13 +416,13 @@
 				<div class="projectcontainer">
 					<div class="projects">
 						<a href="https://github.com/wildlingjill/maze_project">
-							<img class="img" src="img/imaze.png" width="400px" height="250px" style="margin-left: 20px">
+							<img class="img" src="img/imaze.png" width="400px" height="250px">
 						</a>
 						<a href="https://github.com/wildlingjill/QuestionsAnswersBoilerplate/tree/belt2">
-							<img class="img" src="img/questionsanswers.png" width="400px" height="250px" style="margin-left: 20px">
+							<img class="img" src="img/questionsanswers.png" width="400px" height="250px">
 						</a>
 						<a href="https://github.com/wildlingjill/directme">
-							<img class="img" src="img/directme.png" width="400px" height="250px" style="margin-left: 20px">
+							<img class="img" src="img/directme.png" width="400px" height="250px">
 						</a>
 					</div>
 					<div class="projectdescriptions">
